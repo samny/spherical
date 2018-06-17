@@ -150,9 +150,10 @@ export function init () {
     viewer.setImage(event.detail)
   })
 
-  window.ontouchstart = function(event) {
-    if (event.touches.length>1) { // prevent default pinch zoom
-      event.preventDefault();
+  window.ontouchstart = function (event) {
+    if (event.touches.length > 1) { // prevent default pinch zoom
+      console.log('disabling multitouch')
+      event.preventDefault()
     }
   }
 }
