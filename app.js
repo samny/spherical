@@ -77,6 +77,7 @@ function createViewer () {
 function createFileSelect () {
   const el = document.createElement('label')
   el.classList.add('fileinput')
+  el.innerText = 'Drop an image anywhere'
   const input = document.createElement('input')
   input.id = 'file'
   input.name = 'file'
@@ -140,10 +141,11 @@ function createFileSelect () {
 }
 
 export function init () {
+  const appRoot = document.getElementById('appRoot')
   const viewer = createViewer()
-  document.body.appendChild(viewer.domElement)
+  appRoot.appendChild(viewer.domElement)
   const fileSelect = createFileSelect()
-  document.body.appendChild(fileSelect.domElement)
+  appRoot.appendChild(fileSelect.domElement)
   fileSelect.domElement.addEventListener('fileselect:loaded', (event) => {
     viewer.setImage(event.detail)
   })
