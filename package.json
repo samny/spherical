@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "dist": "parcel build index.html",
+    "dist": "parcel build index.html --public-url '/spherical'",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
