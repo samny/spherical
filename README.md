@@ -1,1 +1,1 @@
-[![Build Status](https://travis-ci.org/samny/textastic-test.svg?branch=master)](https://travis-ci.org/samny/textastic-test)
+[![Build Status](https://travis-ci.org/samny/spherical.svg?branch=master)](https://travis-ci.org/samny/spherical)
