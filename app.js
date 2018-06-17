@@ -47,6 +47,7 @@ function createViewer () {
   renderer.setSize(window.innerWidth, height)
 
   const handleResize = (event) => {
+    alert('handleResize: ' + event.type)
     width = window.innerWidth
     height = window.innerHeight
     camera.aspect = width / height
