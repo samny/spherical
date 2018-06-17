@@ -31,7 +31,7 @@
     <style>
 
         html, body {
-            touch-action: none; /* Not supported in ios Safari :( */
+            touch-action: manipulation; /* "none" not supported in ios Safari :( */
             position: fixed;
             margin: 0;
             min-height: 100%;
@@ -54,10 +54,11 @@
             overflow: hidden;
             position: absolute;
             z-index: -1;
-        }</style>
+        }
+    </style>
 </head>
-<body style="touch-action: none;">
-<div id="appRoot" style="touch-action: none;"></div>
+<body>
+<div id="appRoot"></div>
 <script src="./index.js"></script>
 </body>
 </html>

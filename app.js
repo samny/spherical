@@ -61,6 +61,7 @@ function createViewer () {
   }
 
   window.addEventListener('resize', handleResize)
+  window.addEventListener('orientationchange', handleResize)
   render()
 
   return {
@@ -150,13 +151,13 @@ export function init () {
     viewer.setImage(event.detail)
   })
 
-  window.addEventListener(
-    'touchmove',
-    (event) => {
-      if (event.scale !== 1) {
-        event.preventDefault()
-      }
-    },
-    {passive: false}
-  )
+  // window.addEventListener(
+  //   'touchmove',
+  //   (event) => {
+  //     if (event.scale !== 1) {
+  //       event.preventDefault()
+  //     }
+  //   },
+  //   {passive: false}
+  // )
 }
