@@ -149,11 +149,4 @@ export function init () {
   fileSelect.domElement.addEventListener('fileselect:loaded', (event) => {
     viewer.setImage(event.detail)
   })
-
-  window.ontouchstart = function (event) {
-    if (event.touches.length > 1) { // prevent default pinch zoom
-      console.log('disabling multitouch')
-      event.preventDefault()
-    }
-  }
 }
