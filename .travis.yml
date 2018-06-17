@@ -1,7 +1,12 @@
+scripts:
+- yarn test
+- yarn dist
 language: node_js
 node_js: "9"
 env:
 - NODE_ENV=TEST
+git:
+  depth: 3
 cache: yarn
 deploy:
   local-dir: dist
