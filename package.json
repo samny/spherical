@@ -13,7 +13,7 @@
   "scripts": {
     "start": "parcel index.html",
     "dist": "parcel build index.html",
-    "deploy": "git subtree split --prefix='./dist' -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-page"
+    "deploy": "git subtree split --prefix=dist -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-page"
   },
   "devDependencies": {
     "babel-core": "^6.26.3"
