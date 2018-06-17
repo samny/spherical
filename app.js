@@ -149,4 +149,14 @@ export function init () {
   fileSelect.domElement.addEventListener('fileselect:loaded', (event) => {
     viewer.setImage(event.detail)
   })
+
+  window.addEventListener(
+    'touchmove',
+    (event) => {
+      if (event.scale !== 1) {
+        event.preventDefault()
+      }
+    },
+    {passive: false}
+  )
 }
