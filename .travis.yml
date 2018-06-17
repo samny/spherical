@@ -1,4 +1,4 @@
-scripts:
+script:
 - yarn test
 - yarn dist
 language: node_js
