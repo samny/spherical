@@ -18,12 +18,12 @@ function getViewportSize () {
   const orientation = window.orientation // typeof window.orientation === 'undefined' ? 0 : window.orientation
   let w = document.body.clientWidth
   let h = document.body.clientHeight
-  if (orientation === 0 && width > height || Math.abs(orientation) === 90 && width < height) {
+  if (orientation === 0 && w > h || Math.abs(orientation) === 90 && w < h) {
     w = document.body.clientHeight
     h = document.body.clientWidth
   }
 
-  alert(`createViewer - width: ${width}px, height: ${height}px. Orientation: ${window.orientation}. (${window.innerWidth}x${window.innerHeight})`)
+  console.log(`createViewer - width: ${w}px, height: ${h}px. Orientation: ${window.orientation}. (${window.innerWidth}x${window.innerHeight})`)
   return {width: w, height: h}
 }
 
