@@ -19,6 +19,8 @@ function createViewer () {
   // let height = window.innerHeight
   let width = document.body.clientWidth // why is this not working
   let height = document.body.clientHeight
+  alert(`Resize ${width} x ${height}`)
+
   const scene = new Scene()
   const camera = new PerspectiveCamera(60, width / height, 0.1, 1000)
   camera.position.set(0, 0, -1)
@@ -53,6 +55,7 @@ function createViewer () {
     // let height = window.innerHeight
     let width = document.body.clientWidth
     let height = document.body.clientHeight
+    alert(`Resize ${width} x ${height}`)
     camera.aspect = width / height
     camera.updateProjectionMatrix()
     renderer.setSize(width, height)
@@ -66,7 +69,6 @@ function createViewer () {
 
   window.addEventListener('resize', handleResize)
 
-  handleResize()
   render()
 
   return {
