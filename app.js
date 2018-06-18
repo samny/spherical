@@ -50,12 +50,12 @@ function createViewer () {
   const renderer = new WebGLRenderer()
   renderer.setSize(width, height)
 
-  const handleResize = () => {
+  const handleResize = (event) => {
     // let width = window.innerWidth
     // let height = window.innerHeight
     let width = document.body.clientWidth
     let height = document.body.clientHeight
-    alert(`Resize ${width} x ${height}`)
+    alert(`Resize - width: ${width}px, height: ${height}px. Event: ${event.type}, Orientation: ${window.orientation}. (${window.innerWidth}x${window.innerHeight})`)
     camera.aspect = width / height
     camera.updateProjectionMatrix()
     renderer.setSize(width, height)
@@ -68,6 +68,7 @@ function createViewer () {
   }
 
   window.addEventListener('resize', handleResize)
+  window.addEventListener('orientationchange', handleResize)
 
   render()
 
