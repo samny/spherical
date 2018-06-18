@@ -15,8 +15,10 @@ import {
 import OrbitControls from './OrbitControls.js'
 
 function createViewer () {
-  let width = window.innerWidth
-  let height = window.innerHeight
+  // let width = window.innerWidth
+  // let height = window.innerHeight
+  let width = document.body.clientWidth
+  let height = document.body.clientHeight
   const scene = new Scene()
   const camera = new PerspectiveCamera(60, width / height, 0.1, 1000)
   camera.position.set(0, 0, -1)
@@ -47,8 +49,10 @@ function createViewer () {
   renderer.setSize(width, height)
 
   const handleResize = () => {
-    width = window.innerWidth
-    height = window.innerHeight
+    // let width = window.innerWidth
+    // let height = window.innerHeight
+    let width = document.body.clientWidth
+    let height = document.body.clientHeight
     camera.aspect = width / height
     camera.updateProjectionMatrix()
     renderer.setSize(width, height)
