@@ -44,10 +44,9 @@ function createViewer () {
   controls.rotateSpeed = -0.7
 
   const renderer = new WebGLRenderer()
-  renderer.setSize(window.innerWidth, height)
+  renderer.setSize(width, height)
 
   const handleResize = (event) => {
-    alert('handleResize: ' + event.type)
     width = document.body.clientWidth
     height = document.body.clientHeight
     camera.aspect = width / height
@@ -62,7 +61,6 @@ function createViewer () {
   }
 
   window.addEventListener('resize', handleResize)
-  window.addEventListener('orientationchange', handleResize)
   render()
 
   return {
