@@ -14,12 +14,21 @@ import {
 
 import OrbitControls from './OrbitControls.js'
 
+function getViewportSize () {
+  const orientation = window.orientation // typeof window.orientation === 'undefined' ? 0 : window.orientation
+  let w = document.body.clientWidth
+  let h = document.body.clientHeight
+  if (orientation === 0 && width > height || Math.abs(orientation) === 90 && width < height) {
+    w = document.body.clientHeight
+    h = document.body.clientWidth
+  }
+
+  alert(`createViewer - width: ${width}px, height: ${height}px. Orientation: ${window.orientation}. (${window.innerWidth}x${window.innerHeight})`)
+  return {width: w, height: h}
+}
+
 function createViewer () {
-  // let width = window.innerWidth
-  // let height = window.innerHeight
-  let width = window.orientation !== 0 ? document.body.clientWidth : document.body.clientHeight
-  let height = window.orientation !== 0 ? document.body.clientHeight : document.body.clientWidth
-  alert(`Resize ${width} x ${height}`)
+  let {width, height} = getViewportSize()
 
   const scene = new Scene()
   const camera = new PerspectiveCamera(60, width / height, 0.1, 1000)
@@ -51,11 +60,7 @@ function createViewer () {
   renderer.setSize(width, height)
 
   const handleResize = (event) => {
-    // let width = window.innerWidth
-    // let height = window.innerHeight
-    let width = window.orientation !== 0 ? document.body.clientWidth : document.body.clientHeight
-    let height = window.orientation !== 0 ? document.body.clientHeight : document.body.clientWidth
-    alert(`Resize - width: ${width}px, height: ${height}px. Event: ${event.type}, Orientation: ${window.orientation}. (${window.innerWidth}x${window.innerHeight})`)
+    let {width, height} = getViewportSize()
     camera.aspect = width / height
     camera.updateProjectionMatrix()
     renderer.setSize(width, height)
