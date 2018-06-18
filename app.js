@@ -17,7 +17,7 @@ import OrbitControls from './OrbitControls.js'
 function createViewer () {
   // let width = window.innerWidth
   // let height = window.innerHeight
-  let width = document.body.clientWidth
+  let width = document.body.clientWidth // why is this not working
   let height = document.body.clientHeight
   const scene = new Scene()
   const camera = new PerspectiveCamera(60, width / height, 0.1, 1000)
