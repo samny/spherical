@@ -15,8 +15,8 @@ import {
 import OrbitControls from './OrbitControls.js'
 
 function createViewer () {
-  let width = document.body.clientWidth
-  let height = document.body.clientHeight
+  let width = window.innerWidth
+  let height = window.innerHeight
   const scene = new Scene()
   const camera = new PerspectiveCamera(60, width / height, 0.1, 1000)
   camera.position.set(0, 0, -1)
@@ -46,9 +46,9 @@ function createViewer () {
   const renderer = new WebGLRenderer()
   renderer.setSize(width, height)
 
-  const handleResize = (event) => {
-    width = document.body.clientWidth
-    height = document.body.clientHeight
+  const handleResize = () => {
+    width = window.innerWidth
+    height = window.innerHeight
     camera.aspect = width / height
     camera.updateProjectionMatrix()
     renderer.setSize(width, height)
@@ -61,6 +61,8 @@ function createViewer () {
   }
 
   window.addEventListener('resize', handleResize)
+
+  handleResize()
   render()
 
   return {
@@ -149,14 +151,4 @@ export function init () {
   fileSelect.domElement.addEventListener('fileselect:loaded', (event) => {
     viewer.setImage(event.detail)
   })
-
-  // window.addEventListener(
-  //   'touchmove',
-  //   (event) => {
-  //     if (event.scale !== 1) {
-  //       event.preventDefault()
-  //     }
-  //   },
-  //   {passive: false}
-  // )
 }
