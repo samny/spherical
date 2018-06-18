@@ -7,4 +7,4 @@ parcelRequire=function(e,r,n,t){var i="function"==typeof parcelRequire&&parcelRe
 },{"three":73,"./OrbitControls.js":71}],17:[function(require,module,exports) {
 "use strict";var i=require("./app.js");(0,i.init)();
 },{"./app.js":69}]},{},[17], null)
-//# sourceMappingURL=/spherical/spherical.0d0e8ac8.map
+//# sourceMappingURL=/spherical/spherical.728c21e3.map
