@@ -91,7 +91,7 @@ function createViewer () {
 function createFileSelect () {
   const el = document.createElement('label')
   el.classList.add('fileinput')
-  el.innerText = 'Drop an image anywhere'
+  // el.innerText = 'Drop an image anywhere'
   const input = document.createElement('input')
   input.id = 'file'
   input.name = 'file'
