@@ -17,8 +17,8 @@ import OrbitControls from './OrbitControls.js'
 function createViewer () {
   // let width = window.innerWidth
   // let height = window.innerHeight
-  let width = document.body.clientWidth // why is this not working
-  let height = document.body.clientHeight
+  let width = window.orientation !== 0 ? document.body.clientWidth : document.body.clientHeight
+  let height = window.orientation !== 0 ? document.body.clientHeight : document.body.clientWidth
   alert(`Resize ${width} x ${height}`)
 
   const scene = new Scene()
@@ -53,8 +53,8 @@ function createViewer () {
   const handleResize = (event) => {
     // let width = window.innerWidth
     // let height = window.innerHeight
-    let width = document.body.clientWidth
-    let height = document.body.clientHeight
+    let width = window.orientation !== 0 ? document.body.clientWidth : document.body.clientHeight
+    let height = window.orientation !== 0 ? document.body.clientHeight : document.body.clientWidth
     alert(`Resize - width: ${width}px, height: ${height}px. Event: ${event.type}, Orientation: ${window.orientation}. (${window.innerWidth}x${window.innerHeight})`)
     camera.aspect = width / height
     camera.updateProjectionMatrix()
