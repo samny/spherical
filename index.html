@@ -2,60 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Spherical</title>
-
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="manifest" href="./manifest.webmanifest">
 
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="PWA Splash">
+    <link rel="apple-touch-startup-image" href="./images/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./images/splash/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./images/splash/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./images/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./images/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./images/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="./images/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png">
+    <link rel="mask-icon" href="./images/icons/safari-pinned-tab.svg" color="#6F6F6F">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
 
-    <link rel="apple-touch-startup-image" href="./images/ios/ios-launchimage-640-1136.png">
-    <link rel="apple-touch-startup-image" href="./images/ios/ios-launchimage-640-1136.png"
-          media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="./images/ios/ios-launchimage-750-1334.png"
-          media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="./images/ios/ios-launchimage-1125-2436.png"
-          media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="./images/ios/ios-launchimage-1242-2208.png"
-          media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="./images/ios/ios-launchimage-1536-2048.png"
-          media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="./images/ios/ios-launchimage-1668-2224.png"
-          media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-    <link rel="apple-touch-startup-image" href="./images/ios/ios-launchimage-2048-2732.png"
-          media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
-
-    <link rel="apple-touch-icon" href="./images/ios/ios-appicon-76-76.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="./images/ios/ios-appicon-120-120.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="./images/ios/ios-appicon-152-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/ios/ios-appicon-180-180.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="./images/ios/ios-appicon-1024-1024.png">
-
-
-    <!-- iPhone ICON -->
-    <link href="./images/ios/ios-appicon-76-76.png" sizes="57x57" rel="apple-touch-icon">
-    <!-- iPad ICON-->
-    <link href="./images/ios/ios-appicon-76-76.png" sizes="72x72" rel="apple-touch-icon">
-    <!-- iPhone (Retina) ICON-->
-    <link href="./images/ios/ios-appicon-120-120.png" sizes="114x114" rel="apple-touch-icon">
-    <!-- iPad (Retina) ICON-->
-    <link href="./images/ios/ios-appicon-152-152.png" sizes="144x144" rel="apple-touch-icon">
-
-    <!-- iPhone SPLASHSCREEN-->
-    <link href="./images/ios/ios-launchimage-640-960.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
-    <!-- iPhone (Retina) SPLASHSCREEN-->
-    <link href="./images/ios/ios-launchimage-640-960.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-    <!-- iPad (portrait) SPLASHSCREEN-->
-    <link href="./images/ios/ios-launchimage-768-1024.png" media="(device-width: 768px) and (orientation: portrait)" rel="apple-touch-startup-image">
-    <!-- iPad (landscape) SPLASHSCREEN-->
-    <link href="./images/ios/ios-launchimage-768-1024.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
-    <!-- iPad (Retina, portrait) SPLASHSCREEN-->
-    <link href="./images/ios/ios-launchimage-1536-2048.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-    <!-- iPad (Retina, landscape) SPLASHSCREEN-->
-    <link href="./images/ios/ios-launchimage-2048-1536.png" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
-    <!-- iPhone 6/7/8 -->
-    <link href="./images/ios/ios-launchimage-750-1334.png" media="(device-width: 375px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-    <!-- iPhone 6 Plus/7 Plus/8 Plus -->
-    <link href="./images/ios/ios-launchimage-1242-2208.png" media="(device-width: 414px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <title>Spherical</title>
 
     <style>
 
