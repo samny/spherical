@@ -14,8 +14,7 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "dist": "parcel build index.html --public-url '/spherical'",
-    "postdist": "copy CNAME dist",
+    "dist": "parcel build index.html --public-url '/spherical' && copy ./CNAME ./dist",
     "test": "eslint \"**/*.js\""
   }
 }
