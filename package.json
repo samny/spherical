@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "dist": "parcel build index.html --public-url '/spherical' && cp ./CNAME ./dist/CNAME",
+    "dist": "parcel build index.html --public-url '/spherical'",
     "test": "eslint \"**/*.js\""
   }
 }
