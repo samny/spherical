@@ -41,7 +41,7 @@ function createViewer () {
   sphere.scale.x = -1
   scene.add(sphere)
 
-  const light = new AmbientLight(0x404040)
+  const light = new AmbientLight(0x32281F)
   scene.add(light)
   const directionalLight = new DirectionalLight(0xffffff, 0.5)
   scene.add(directionalLight)
@@ -59,7 +59,7 @@ function createViewer () {
   const renderer = new WebGLRenderer()
   renderer.setSize(width, height)
 
-  const handleResize = (event) => {
+  const handleResize = () => {
     let {width, height} = getViewportSize()
     camera.aspect = width / height
     camera.updateProjectionMatrix()
@@ -133,10 +133,10 @@ function createFileSelect () {
     }
   })
 
-  window.addEventListener('mousedown', (event) => {
+  window.addEventListener('mousedown', () => {
     mouseDown = true
   })
-  window.addEventListener('mousemove', (event) => {
+  window.addEventListener('mousemove', () => {
     if (mouseDown) {
       dragging = true
     }
