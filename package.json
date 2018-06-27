@@ -4,10 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "eslint": "^4.19.1",
-    "parcel-bundler": "^1.9.3"
+    "babel-preset-env": "1.7.0",
+    "eslint": "4.19.1",
+    "parcel-bundler": "1.9.3"
   },
   "dependencies": {
     "three": "0.93.0"
