@@ -1,10 +1,8 @@
 script:
 - yarn test
 - yarn dist
-#before_install:
-#- yarn add global parcel-bundler
 language: node_js
-node_js: "9"
+node_js: "10"
 env:
 - NODE_ENV=TEST
 git:
