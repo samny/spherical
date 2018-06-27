@@ -7,7 +7,7 @@ env:
 - NODE_ENV=TEST
 git:
   depth: 3
-cache: yarn
+#cache: yarn
 deploy:
   local-dir: dist
   provider: pages
