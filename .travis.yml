@@ -3,8 +3,8 @@ script:
 - npm run dist
 language: node_js
 node_js: "10"
-env:
-- NODE_ENV=TEST
+#env:
+#- NODE_ENV=TEST
 git:
   depth: 3
 #cache: yarn
