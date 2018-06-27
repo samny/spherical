@@ -1,6 +1,6 @@
 script:
 - yarn test
-#- yarn dist
+- yarn dist
 language: node_js
 node_js: "10"
 env:
