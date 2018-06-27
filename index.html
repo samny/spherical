@@ -24,7 +24,101 @@
     <meta name="theme-color" content="#32281F">
 
     <title>Spherical</title>
-    <link rel="stylesheet" href="./index.css">
+    <style>
+        html, body {
+            touch-action: manipulation; /* "none" not supported in ios Safari :( */
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            min-height: 100%;
+            overflow: hidden;
+            background: #32281F;
+        }
+
+        .fileinput {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .fileinput input {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        body::after {
+            content: 'Screen size here';
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 0.1em;
+            font-size: 0.7rem;
+            font-family: sans-serif;
+            color: white;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        @media screen and (orientation: portrait){
+            body::after {
+                content: 'portrait';
+            }
+        }
+        @media screen and (orientation: landscape){
+            body::after {
+                content: 'landscape';
+            }
+        }
+
+        @media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+            body::after {
+                content: '320x568 @2x portrait (splash_launch-640x1136.png)';
+            }
+        }
+
+        @media screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) {
+            body::after {
+                content: '375 x 667, @2x, portrait (splash_launch-750x1294.png)';
+            }
+        }
+
+        @media screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+            body::after {
+                content: '414x736 @3x portrait (splash_launch-1242x2148.png)';
+            }
+        }
+
+        @media screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+            body::after {
+                content: '375x812 @3x portrait (splash_launch-1125x2436.png)';
+            }
+        }
+
+        @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+            body::after {
+                content: 'w768-1024 @2x portrait (splash_launch-1536x2048.png)';
+            }
+        }
+
+        @media screen and (min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+            body::after {
+                content: 'w834-834 @2x portrait (splash_launch-1668x2224.png)';
+            }
+        }
+
+        @media screen and (min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+            body::after {
+                content: 'w1024-1024 @2x portrait (splash_launch-2048x2732.png)';
+            }
+        }
+    </style>
 </head>
 <body>
 <div id="appRoot"></div>
