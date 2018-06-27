@@ -1,6 +1,6 @@
 script:
-- yarn test
-- yarn dist
+- npm run test
+- npm run dist
 language: node_js
 node_js: "10"
 env:
