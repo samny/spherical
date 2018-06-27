@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "dist": "parcel build index.html --public-url '/spherical'",
+    "dist": "df -h && parcel build index.html --public-url '/spherical'",
     "test": "eslint \"**/*.js\""
   }
 }
